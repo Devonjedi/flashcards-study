@@ -1,20 +1,27 @@
 .navigation {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .next-button {
-  background-color: #2ecc71;
-  color: white;
+  background-color: #3498db; /* Blueish */
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 16px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
-.next-button:hover {
-  background-color: #27ae60;
+.next-button:disabled {
+  background-color: #bdc3c7; /* Gray */
+  cursor: not-allowed;
+}
+
+.next-button:hover:not(:disabled) {
+  background-color: #2980b9; /* Darker blue on hover */
 }
